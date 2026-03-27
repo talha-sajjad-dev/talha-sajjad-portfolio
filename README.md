@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Talha Sajjad — Developer Portfolio
 
-## Getting Started
+A modern, high-performance portfolio built with **Next.js App Router**, designed to showcase projects, skills, and professional experience in a clean and structured way.
 
-First, run the development server:
+---
+
+## 🌐 Live Demo
+
+👉 https://talhasajjad.github.io 
+
+---
+
+## 📌 About The Project
+
+This portfolio is built to present my work, experience, and technical capabilities in a **professional and recruiter-friendly format**.
+
+It highlights:
+
+* Real-world projects with detailed case studies
+* Technical skills with categorized filtering
+* Client testimonials and credibility signals
+* Clear contact pathways for collaboration
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* **Next.js 16 (App Router)**
+* **React 19**
+* **TypeScript**
+* **Tailwind CSS**
+* **React Icons**
+
+### Architecture
+
+* Static-first approach (SSG)
+* Component-based UI structure
+* Typed local data modeling
+
+### Deployment
+
+* Vercel (recommended)
+* Compatible with Netlify / Node hosting
+
+---
+
+## ✨ Key Features
+
+* 🔥 **Hero Section** — Strong personal branding with CTA
+* 👨‍💻 **About Section** — Clear developer positioning
+* 📈 **Experience Timeline** — Visual work & education journey
+* 🧠 **Skills Filtering** — Dynamic category-based filtering
+* 🎯 **Projects Showcase** — Featured + full project listing
+* 🔗 **Shareable Filters** — URL-based filtering for easy sharing
+* 📄 **Project Detail صفحات** — Deep dive into each project
+* ⭐ **Testimonials Carousel** — Client feedback & ratings
+* 📱 **Fully Responsive** — Mobile-first design
+
+---
+
+## 🧱 Project Structure
+
+```bash
+app/            # Routes & pages (App Router)
+components/     # Reusable UI components
+data/           # Static typed content (projects, skills, reviews)
+public/         # Assets
+```
+
+* Uses **static generation** for performance & SEO
+* No backend dependency — data-driven UI via TypeScript
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/talhasajjad/talhasajjad.github.io.git
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
+👉 http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Deployment
 
-## Learn More
+### Recommended: Vercel
 
-To learn more about Next.js, take a look at the following resources:
+* Zero-config deployment for Next.js
+* Optimized performance and edge delivery
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Alternative
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Netlify
+* Render
+* VPS (Node.js environment)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📊 Highlights
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Clean and scalable UI architecture
+* Strong focus on **project storytelling**
+* SEO-friendly with static generation
+* Built with modern frontend best practices
+
+---
+
+## 👨‍💻 My Role
+
+Designed and developed this portfolio as a **frontend-focused full-stack developer**, emphasizing:
+
+* UI/UX design and component architecture
+* Real-world project presentation
+* Performance and scalability
+
+---
+
+## 📬 Contact
+
+If you'd like to work together or discuss opportunities:
+
+* 📧 Email: [talhasajjad148@gmail.com](mailto:talhasajjad148@gmail.com)
+* 💼 LinkedIn: https://www.linkedin.com/in/talha-sajjad-dev
+* 🐙 GitHub: https://github.com/full-stack-website-developer
+
+---
+
+## ⭐ Final Note
+
+If you like this project, feel free to ⭐ the repo — it helps!
