@@ -6,7 +6,7 @@ A modern, high-performance portfolio built with **Next.js App Router**, designed
 
 ## 🌐 Live Demo
 
-👉 https://talhasajjad.github.io 
+👉 [https://talhasajjad.github.io ](https://talha-sajjad-portfolio.netlify.app/)
 
 ---
 
