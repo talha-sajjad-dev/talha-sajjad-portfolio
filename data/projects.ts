@@ -85,47 +85,83 @@ export const projects: Project[] = [
   {
     id: "2",
     slug: "modapaya-fashion-store",
-    title: "Modapaya - Custom Rhinestone Apparel",
+    title: "Modapaya - Multi-Vendor E-commerce Marketplace",
     category: "E-Commerce",
-    tags: ["E-Commerce", "Laravel", "Chat System", "Excel Import"],
+    tags: ["E-Commerce", "Laravel", "Shofy", "ZCart", "Quote System", "Messaging"],
     shortDescription:
-      "Custom rhinestone and bling apparel e-commerce store with multi-role chat and bulk product management.",
+      "Custom rhinestone apparel marketplace with advanced features including quote system, bulk import, messaging, and multi-platform integration.",
     description:
-      "An online shop for rhinestone and bling apparel. Worked for 3 months on feature additions including multi-role chat system (vendor/user/admin), Excel-based product & category uploads, quote system improvements, and various bug fixes. The platform supports custom orders and wholesale inquiries.",
-    thumbnail: "/projects/modapaya.jpg",
+      "A comprehensive multi-vendor e-commerce platform for custom rhinestone and bling apparel. Worked extensively on migrating from ZCart to Shofy platform, implementing complex features including multi-role chat system (vendor/user/admin), Excel-based bulk product & category uploads with variant support, custom quote management system, order creation workflow, shipping integration with Shippo, and payment processing with Stripe/PayPal. The platform supports custom orders, wholesale inquiries, and cross-platform listing to Etsy, TikTok, and other marketplaces.",
+    thumbnail: "/images/projects/modapaya/featured.png",
     images: [
-      "/projects/modapaya-1.jpg",
-      "/projects/modapaya-2.jpg",
+      "/images/projects/modapaya/home.png",
+      "/images/projects/modapaya/product-page.png",
+      "/images/projects/modapaya/category.png",
     ],
     featured: true,
-    year: "2024",
-    client: "Modapaya",
-    duration: "3 months",
+    year: "2024-2025",
+    client: "Modapaya LLC",
+    duration: "9 months",
     liveUrl: "https://modapaya.com/",
     githubUrl: "",
-    techStack: ["Laravel", "MySQL", "JavaScript", "Bootstrap"],
+    techStack: ["Laravel", "Shofy", "ZCart", "MySQL", "JavaScript", "Vue.js", "Shippo API", "Stripe", "PayPal", "DigitalOcean"],
     requirements: [
-      "Multi-role chat system for admin, vendors, and users",
-      "Bulk product and category upload via Excel",
-      "Quote system for custom orders",
-      "Inventory management for rhinestone products",
-      "Integration with Etsy and other marketplaces",
-      "Bug fixes and performance improvements",
+      "Platform migration from ZCart to Shofy with zero downtime",
+      "Multi-role chat system for admin, vendors, and customers with real-time notifications",
+      "Bulk product and category upload via Excel with variants, images, and videos",
+      "Custom quote system with email notifications and checkout integration",
+      "Order creation workflow for vendors to send payment links to customers",
+      "Shipping integration with Shippo API for real-time rate calculation",
+      "Payment processing with Stripe and PayPal",
+      "Product messaging system with file attachments",
+      "Bulk price update feature (fixed price and percentage discount)",
+      "SKU management with auto-generation and 20-character limit",
+      "Return and refund management system",
+      "GitHub integration for continuous deployment",
+      "Server migration and DNS management",
     ],
     problemsFaced: [
       {
-        title: "Excel Import Performance",
+        title: "Platform Migration Complexity",
         description:
-          "Importing large Excel files with thousands of products caused timeouts and memory issues.",
+          "Migrating from ZCart to Shofy while preserving all custom features, data, and ensuring zero downtime for live business operations.",
         solution:
-          "Implemented chunked processing with Laravel queues and background jobs for handling large imports efficiently.",
+          "Implemented a staged migration approach: set up parallel environment, migrated database with data transformation scripts, tested all features thoroughly, then performed DNS cutover during low-traffic hours. Used GitHub for version control and automated deployment.",
+      },
+      {
+        title: "Excel Import Performance with Variants",
+        description:
+          "Importing large Excel files with thousands of products and multiple variants (colors, sizes, stone types) caused timeouts and memory issues. Each product could have 50+ variant combinations.",
+        solution:
+          "Implemented chunked processing with Laravel queues and background jobs. Added progress tracking, error handling with detailed logs, and optimized database queries with bulk inserts. Reduced import time from 30+ minutes to under 5 minutes for 1000+ products.",
       },
       {
         title: "Multi-role Chat Implementation",
         description:
-          "Managing chat permissions and message routing between admin, vendors, and customers was complex.",
+          "Managing chat permissions and message routing between admin, vendors, and customers was complex. Needed to support product-specific inquiries with context and file attachments.",
         solution:
-          "Built a role-based chat architecture with separate channels and real-time notifications using Laravel Echo and Pusher.",
+          "Built a role-based chat architecture with separate channels and real-time notifications. Implemented product context linking so messages automatically reference the product being discussed. Added support for PDF and image attachments with secure storage.",
+      },
+      {
+        title: "Quote System with Checkout Integration",
+        description:
+          "Creating a seamless flow from quote request to payment required integrating with existing checkout, handling custom products, and managing quote acceptance workflow.",
+        solution:
+          "Developed a complete quote lifecycle: customer requests quote → vendor creates custom order with products → system generates unique checkout link → customer accepts and pays → order is created. Integrated with Stripe/PayPal and Shippo for shipping calculations.",
+      },
+      {
+        title: "Shippo API Weight Limitations",
+        description:
+          "Shipping methods disappeared when product weight exceeded carrier limits. Shippo API returns no options when total weight is too high, breaking the checkout process.",
+        solution:
+          "Implemented weight validation before checkout, added fallback shipping options, and created custom shipping fee input for vendors to manually set shipping costs when automated calculation fails.",
+      },
+      {
+        title: "Vue.js Component Complexity",
+        description:
+          "Shofy uses Vue.js for product management, but the code was AI-generated and lacked proper structure. Making changes to variant management and pricing was difficult.",
+        solution:
+          "Refactored critical Vue components with proper modularity, added TypeScript types where possible, and created custom components for bulk operations. Documented the component architecture for future maintenance.",
       },
     ],
   },

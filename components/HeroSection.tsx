@@ -48,24 +48,23 @@ export default function HeroSection() {
             <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
           </Link>
           <a
-            href="#about"
+            href="/pdf/resume/Talha Sajjad.pdf"
+            download="Talha_Sajjad_Resume.pdf"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-border text-foreground font-medium hover:border-accent/50 hover:bg-card transition-all duration-300"
           >
             <FaDownload size={14} />
-            Download CV
+            Download Resume
           </a>
         </div>
 
         {/* Stats strip */}
         <div
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto animate-fade-in-up"
+          className="mt-20 grid grid-cols-2 gap-6 max-w-xl mx-auto animate-fade-in-up"
           style={{ animationDelay: "0.4s" }}
         >
           {[
             { value: "1+", label: "Years Experience" },
             { value: "20+", label: "Projects Delivered" },
-            { value: "15+", label: "Happy Clients" },
-            { value: "100%", label: "Project Success" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <p className="text-2xl md:text-3xl font-bold gradient-text">

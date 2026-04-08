@@ -31,7 +31,7 @@ const timeline: TimelineItem[] = [
   {
     type: "work",
     role: "JavaScript Developer",
-    company: "Modapaya",
+    company: "Acre31",
     period: "2024",
     description:
       "E-commerce fashion and custom apparel platform. Built multi-role chat system (Admin, Vendor, User). Developed bulk product upload system (Excel-based). Improved internal workflows and system performance. Contributed to scalability and feature enhancements.",

@@ -9,7 +9,6 @@ export const skills: Skill[] = [
   { name: "React.js", icon: "FaReact", category: "Frontend" },
   { name: "Next.js", icon: "SiNextdotjs", category: "Frontend" },
   { name: "JavaScript", icon: "SiJavascript", category: "Frontend" },
-  { name: "TypeScript", icon: "SiTypescript", category: "Frontend" },
   { name: "HTML5", icon: "SiHtml5", category: "Frontend" },
   { name: "CSS3", icon: "SiCss3", category: "Frontend" },
   { name: "Tailwind CSS", icon: "SiTailwindcss", category: "Frontend" },
@@ -20,19 +19,14 @@ export const skills: Skill[] = [
   { name: "Express.js", icon: "SiExpress", category: "Backend" },
   { name: "PHP", icon: "FaPhp", category: "Backend" },
   { name: "Laravel", icon: "SiLaravel", category: "Backend" },
-  { name: "CodeIgniter", icon: "SiCodeigniter", category: "Backend" },
-  { name: "Symfony", icon: "SiSymfony", category: "Backend" },
 
   // Database
   { name: "MongoDB", icon: "SiMongodb", category: "Backend" },
   { name: "MySQL", icon: "SiMysql", category: "Backend" },
-  { name: "PostgreSQL", icon: "SiPostgresql", category: "Backend" },
 
   // DevOps & Tools
   { name: "Git", icon: "FaGitAlt", category: "Tools" },
   { name: "GitHub", icon: "FaGithub", category: "Tools" },
-  { name: "Docker", icon: "FaDocker", category: "DevOps" },
-  { name: "AWS", icon: "FaAws", category: "DevOps" },
   { name: "Vercel", icon: "SiVercel", category: "DevOps" },
   { name: "Netlify", icon: "SiNetlify", category: "DevOps" },
 

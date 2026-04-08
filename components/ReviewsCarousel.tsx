@@ -38,36 +38,48 @@ export default function ReviewsCarousel() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {getVisibleReviews().map((review, i) => (
             <div
-              key={`${review.id}-${currentIndex}-${i}`}
-              className="review-card p-6 rounded-2xl bg-card border border-border animate-scale-in"
+              key={`${review.id}-${i}`}
+              className="review-card p-6 rounded-2xl bg-card border border-border animate-scale-in flex flex-col h-full"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
-              <FaQuoteLeft className="text-accent/20 mb-4" size={24} />
-              <p className="text-text-secondary text-sm leading-relaxed mb-6">
-                &ldquo;{review.text}&rdquo;
-              </p>
-
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, si) => (
-                  <FaStar
-                    key={si}
-                    size={12}
-                    className={
-                      si < review.rating ? "text-[#FFD93D]" : "text-border"
-                    }
-                  />
-                ))}
+              <FaQuoteLeft className="text-accent/20 mb-4 flex-shrink-0" size={24} />
+              <div className="flex-grow mb-6 overflow-hidden">
+                <p className="text-text-secondary text-sm leading-relaxed line-clamp-6">
+                  &ldquo;{review.text}&rdquo;
+                </p>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-accent-secondary flex items-center justify-center text-white font-bold text-sm">
-                  {review.name.charAt(0)}
+              <div className="mt-auto">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(5)].map((_, si) => (
+                    <FaStar
+                      key={si}
+                      size={12}
+                      className={
+                        si < review.rating ? "text-[#FFD93D]" : "text-border"
+                      }
+                    />
+                  ))}
                 </div>
-                <div>
-                  <p className="font-semibold text-sm">{review.name}</p>
-                  <p className="text-xs text-text-muted">
-                    {review.role} @ {review.company}
-                  </p>
+
+                <div className="flex items-center gap-3">
+                  {review.avatar ? (
+                    <img
+                      src={review.avatar}
+                      alt={review.name}
+                      className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+                    />
+                  ) : (
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-accent-secondary flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                      {review.name.charAt(0)}
+                    </div>
+                  )}
+                  <div className="min-w-0">
+                    <p className="font-semibold text-sm truncate">{review.name}</p>
+                    <p className="text-xs text-text-muted truncate">
+                      {review.role} @ {review.company}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -89,11 +101,10 @@ export default function ReviewsCarousel() {
               <button
                 key={i}
                 onClick={() => setCurrentIndex(i)}
-                className={`transition-all duration-300 rounded-full ${
-                  i === currentIndex
-                    ? "w-8 h-2 bg-accent"
-                    : "w-2 h-2 bg-border hover:bg-text-muted"
-                }`}
+                className={`transition-all duration-300 rounded-full ${i === currentIndex
+                  ? "w-8 h-2 bg-accent"
+                  : "w-2 h-2 bg-border hover:bg-text-muted"
+                  }`}
                 aria-label={`Go to review ${i + 1}`}
               />
             ))}
