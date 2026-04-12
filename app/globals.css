@@ -60,6 +60,44 @@ body {
   background-clip: text;
 }
 
+/* Featured / projects header CTA */
+.ghost-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.ghost-pill-btn:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  box-shadow: 0 0 28px rgba(108, 99, 255, 0.2);
+}
+
+/* Contact / glass info tiles */
+.glass-card {
+  display: block;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
 /* Glowing border effect */
 .glow-border {
   position: relative;
@@ -102,10 +140,10 @@ body {
 @keyframes float {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0) rotate(var(--r, 0deg));
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-10px) rotate(var(--r, 0deg));
   }
 }
 
@@ -242,4 +280,90 @@ body {
 }
 .review-card:hover {
   border-color: var(--accent);
+}
+
+/* Lightbox custom styles */
+.yarl__root {
+  --yarl__color_backdrop: rgba(0, 0, 0, 0.95);
+  --yarl__color_button: rgba(255, 255, 255, 0.8);
+  --yarl__color_button_active: rgba(255, 255, 255, 1);
+}
+
+.yarl__button {
+  filter: none !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+.yarl__button:hover {
+  background: rgba(108, 99, 255, 0.3) !important;
+  transform: scale(1.1) !important;
+}
+
+.yarl__slide_image {
+  object-fit: contain !important;
+}
+
+/* Featured Projects — premium bento section */
+.featured-bento-mesh {
+  background:
+    radial-gradient(ellipse 90% 70% at 15% 20%, rgba(91, 33, 182, 0.38), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 85% 30%, rgba(37, 99, 235, 0.32), transparent 50%),
+    radial-gradient(ellipse 55% 65% at 50% 95%, rgba(79, 70, 229, 0.28), transparent 45%),
+    radial-gradient(ellipse 40% 40% at 70% 70%, rgba(59, 130, 246, 0.15), transparent 40%),
+    linear-gradient(165deg, #0f0b1a 0%, #0c0a14 35%, #0a0a12 70%, #0e0c18 100%);
+  animation: featured-mesh-drift 22s ease-in-out infinite alternate;
+}
+
+@keyframes featured-mesh-drift {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.06) translate(-1.5%, 1%);
+    opacity: 0.97;
+  }
+}
+
+.featured-section-label {
+  background: linear-gradient(105deg, #22d3ee 0%, #38bdf8 25%, #818cf8 55%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.featured-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 45%;
+  left: -60%;
+  background: linear-gradient(
+    105deg,
+    transparent,
+    rgba(255, 255, 255, 0.22),
+    transparent
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.featured-cta:hover::after {
+  animation: featured-cta-shimmer 0.85s ease forwards;
+}
+
+@keyframes featured-cta-shimmer {
+  0% {
+    left: -60%;
+    opacity: 0.9;
+  }
+  100% {
+    left: 130%;
+    opacity: 0;
+  }
 }

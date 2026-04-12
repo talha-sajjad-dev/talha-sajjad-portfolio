@@ -21,16 +21,19 @@ export interface Project {
     description: string;
     solution: string;
   }[];
+  /** Three headline stats for featured bento “Project highlights” grid */
+  highlights?: { value: string; label: string }[];
 }
 
 export const categories = [
   "All",
-  "E-Commerce",
   "CRM",
+  "E-Commerce",
   "Health & Wellness",
+  "Hospitality & Bookings",
+  "Logistics & Operations",
   "Portfolio",
   "Trading Platform",
-  "Event Venue",
 ];
 
 export const projects: Project[] = [
@@ -44,11 +47,11 @@ export const projects: Project[] = [
       "Full-stack multi-vendor marketplace with JWT authentication, Stripe payments, and real-time chat.",
     description:
       "A scalable multi-vendor e-commerce platform built using the MERN stack. Features include JWT and OAuth authentication with role-based access control, integrated Stripe and PayPal for secure payment processing, real-time chat using Socket.IO for buyer-seller communication, and optimized performance with Cloudinary image handling and efficient API design.",
-    thumbnail: "/projects/mern-shop.jpg",
+    thumbnail: "/images/projects/mern-shop/home.png",
     images: [
-      "/projects/mern-shop-1.jpg",
-      "/projects/mern-shop-2.jpg",
-      "/projects/mern-shop-3.jpg",
+      "/images/projects/mern-shop/product.png",
+      "/images/projects/mern-shop/seller.png",
+      "/images/projects/mern-shop/admin.png",
     ],
     featured: true,
     year: "2024",
@@ -56,6 +59,11 @@ export const projects: Project[] = [
     duration: "Ongoing",
     liveUrl: "https://talha-mern-shop.netlify.app/",
     githubUrl: "",
+    highlights: [
+      { value: "8+", label: "Integrations" },
+      { value: "JWT", label: "Auth System" },
+      { value: "Real-time", label: "Chat & Updates" },
+    ],
     techStack: ["MongoDB", "Express.js", "React", "Node.js", "Stripe", "PayPal", "Socket.IO", "Cloudinary"],
     requirements: [
       "Multi-vendor marketplace with separate dashboards",
@@ -83,6 +91,59 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "13",
+    slug: "acre31-wedding-venue-frontend",
+    title: "Acre31 – Wedding & Event Venue Website",
+    category: "Hospitality & Bookings",
+    tags: ["Next.js", "React.js", "Tailwind CSS", "Event Bookings", "Venue"],
+    shortDescription:
+      "Luxury wedding and event venue site with inquiry and booking-focused UX, modern UI, and responsive design.",
+    description:
+      "Frontend of a luxury wedding and event venue website built with Next.js and React.js. Responsive pages showcasing venue services, galleries, and event information. Modern UI with Tailwind CSS ensuring seamless experience across all devices. Backend built on Laravel.",
+    thumbnail: "/images/projects/acre31/Screenshot from 2026-04-12 08-19-54.png",
+    images: [
+      "/images/projects/acre31-frontend-1.svg",
+      "/images/projects/acre31-frontend-2.svg",
+    ],
+    featured: true,
+    year: "2024",
+    client: "Acre31",
+    duration: "Aug 2024 — Oct 2024",
+    liveUrl: "https://acre31.com/",
+    githubUrl: "",
+    highlights: [
+      { value: "Next.js", label: "Venue frontend" },
+      { value: "TW", label: "Tailwind UI" },
+      { value: "API", label: "Laravel backend" },
+    ],
+    techStack: ["Next.js", "React.js", "Tailwind CSS", "MySQL", "Laravel"],
+    requirements: [
+      "Responsive frontend for all devices",
+      "Venue showcase with image galleries",
+      "Service and event information pages",
+      "Modern UI with Tailwind CSS",
+      "Integration with Laravel backend",
+      "Performance optimization",
+      "SEO-friendly structure",
+    ],
+    problemsFaced: [
+      {
+        title: "Image Gallery Performance",
+        description:
+          "High-resolution venue photos needed to load quickly while maintaining quality across different screen sizes.",
+        solution:
+          "Implemented Next.js Image component with automatic optimization, lazy loading, and responsive image sizes for optimal performance.",
+      },
+      {
+        title: "Backend Integration",
+        description:
+          "Coordinating frontend development with Laravel backend API while maintaining clean separation of concerns.",
+        solution:
+          "Established clear API contracts and used Next.js API routes as a proxy layer for seamless integration with the Laravel backend.",
+      },
+    ],
+  },
+  {
     id: "2",
     slug: "modapaya-fashion-store",
     title: "Modapaya - Multi-Vendor E-commerce Marketplace",
@@ -92,18 +153,23 @@ export const projects: Project[] = [
       "Custom rhinestone apparel marketplace with advanced features including quote system, bulk import, messaging, and multi-platform integration.",
     description:
       "A comprehensive multi-vendor e-commerce platform for custom rhinestone and bling apparel. Worked extensively on migrating from ZCart to Shofy platform, implementing complex features including multi-role chat system (vendor/user/admin), Excel-based bulk product & category uploads with variant support, custom quote management system, order creation workflow, shipping integration with Shippo, and payment processing with Stripe/PayPal. The platform supports custom orders, wholesale inquiries, and cross-platform listing to Etsy, TikTok, and other marketplaces.",
-    thumbnail: "/images/projects/modapaya/featured.png",
+    thumbnail: "/images/projects/modapaya/home.png",
     images: [
       "/images/projects/modapaya/home.png",
       "/images/projects/modapaya/product-page.png",
       "/images/projects/modapaya/category.png",
     ],
-    featured: true,
+    featured: false,
     year: "2024-2025",
     client: "Modapaya LLC",
     duration: "9 months",
     liveUrl: "https://modapaya.com/",
     githubUrl: "",
+    highlights: [
+      { value: "0", label: "Downtime migration" },
+      { value: "Excel", label: "Bulk catalog import" },
+      { value: "Quotes", label: "Custom checkout" },
+    ],
     techStack: ["Laravel", "Shofy", "ZCart", "MySQL", "JavaScript", "Vue.js", "Shippo API", "Stripe", "PayPal", "DigitalOcean"],
     requirements: [
       "Platform migration from ZCart to Shofy with zero downtime",
@@ -175,10 +241,11 @@ export const projects: Project[] = [
       "Wholesale jewelry beads, chains, and findings platform with ongoing maintenance and feature additions.",
     description:
       "A comprehensive wholesale platform for jewelry findings, beads, and chains. Provided hourly maintenance, adding new features and fixing bugs for nearly one year. Built with Next.js frontend and Symfony backend, handling large product catalogs and bulk ordering.",
-    thumbnail: "/projects/gempacked.jpg",
+    thumbnail:
+      "/images/projects/gempacked/Screenshot%20from%202026-04-12%2008-50-04.png",
     images: [
-      "/projects/gempacked-1.jpg",
-      "/projects/gempacked-2.jpg",
+      "/images/projects/gempacked/Screenshot%20from%202026-04-12%2008-51-53.png",
+      "/images/projects/gempacked/Screenshot%20from%202026-04-12%2008-52-05.png",
     ],
     featured: true,
     year: "2024",
@@ -186,7 +253,12 @@ export const projects: Project[] = [
     duration: "1 year",
     liveUrl: "https://gempacked.com/",
     githubUrl: "",
-    techStack: ["Next.js", "Symfony", "PHP", "MySQL", "React"],
+    highlights: [
+      { value: "1yr+", label: "Ongoing work" },
+      { value: "Next.js", label: "Storefront" },
+      { value: "Bulk", label: "Wholesale orders" },
+    ],
+    techStack: ["JavaScript", "Next.js", "React", "MySQL", "PHP", "Laravel"],
     requirements: [
       "Large product catalog management",
       "Bulk ordering system for wholesale customers",
@@ -222,10 +294,10 @@ export const projects: Project[] = [
       "AI-enhanced CRM platform with leads management, project tracking, invoicing, and team collaboration.",
     description:
       "A comprehensive CRM platform offering leads management, project task tracking, invoicing, and team management. Fixed critical 505 errors on various pages and improved system stability. Built with CodeIgniter framework.",
-    thumbnail: "/projects/billvok.jpg",
+    thumbnail: "/images/projects/bilvok/Screenshot from 2026-04-12 09-02-23.png",
     images: [
-      "/projects/billvok-1.jpg",
-      "/projects/billvok-2.jpg",
+      "/images/projects/billvok-1.svg",
+      "/images/projects/billvok-2.svg",
     ],
     featured: false,
     year: "2024",
@@ -233,6 +305,11 @@ export const projects: Project[] = [
     duration: "2 months",
     liveUrl: "https://billvok.com/",
     githubUrl: "",
+    highlights: [
+      { value: "CRM", label: "Leads & tasks" },
+      { value: "505", label: "Stability fixes" },
+      { value: "CI3", label: "CodeIgniter" },
+    ],
     techStack: ["CodeIgniter", "PHP", "MySQL", "JavaScript", "Bootstrap"],
     requirements: [
       "Leads and customer management system",
@@ -262,10 +339,10 @@ export const projects: Project[] = [
       "Multilingual wellness hub connecting users with health and fitness experts for online consultations.",
     description:
       "A professional wellness hub that connects users with health and fitness experts in multiple languages. Offers online consultations and training plans. Implemented comprehensive multi-language support using CodeIgniter framework.",
-    thumbnail: "/projects/goalvalor.jpg",
+    thumbnail: "/images/projects/goalvalor/Screenshot from 2026-04-12 09-12-04.png",
     images: [
-      "/projects/goalvalor-1.jpg",
-      "/projects/goalvalor-2.jpg",
+      "/images/projects/goalvalor-1.svg",
+      "/images/projects/goalvalor-2.svg",
     ],
     featured: false,
     year: "2024",
@@ -273,6 +350,11 @@ export const projects: Project[] = [
     duration: "4 months",
     liveUrl: "https://goalvalor.com/",
     githubUrl: "",
+    highlights: [
+      { value: "i18n", label: "Multi-language" },
+      { value: "Experts", label: "Consultations" },
+      { value: "Plans", label: "Training tools" },
+    ],
     techStack: ["CodeIgniter", "PHP", "MySQL", "JavaScript", "Bootstrap"],
     requirements: [
       "Multi-language support for global reach",
@@ -302,10 +384,10 @@ export const projects: Project[] = [
       "Graphical CPAP report analyzer where users upload sleep data files and view detailed visual reports.",
     description:
       "A specialized platform where users upload CPAP files with various extensions, create an account, and view comprehensive graphical sleep reports. Built using Laravel with advanced file processing and data visualization capabilities.",
-    thumbnail: "/projects/hqsleep.jpg",
+    thumbnail: "/images/projects/hqsleep/featured.svg",
     images: [
-      "/projects/hqsleep-1.jpg",
-      "/projects/hqsleep-2.jpg",
+      "/images/projects/hqsleep/report-1.svg",
+      "/images/projects/hqsleep/report-2.svg",
     ],
     featured: true,
     year: "2024",
@@ -313,6 +395,11 @@ export const projects: Project[] = [
     duration: "3 months",
     liveUrl: "https://hqsleep.com/",
     githubUrl: "",
+    highlights: [
+      { value: "Multi", label: "CPAP file types" },
+      { value: "Charts", label: "Sleep analytics" },
+      { value: "Queues", label: "Heavy uploads" },
+    ],
     techStack: ["Laravel", "PHP", "MySQL", "Chart.js", "JavaScript"],
     requirements: [
       "Support for multiple CPAP file formats",
@@ -349,10 +436,10 @@ export const projects: Project[] = [
       "Holistic healing center website providing detox, pain relief, and natural therapies.",
     description:
       "A comprehensive website for a holistic healing center offering detox, pain relief, and natural therapies. Maintained over six months using Laravel and Livewire, implementing new features and ensuring smooth operations.",
-    thumbnail: "/projects/jakhamhelpkadam.jpg",
+    thumbnail: "/images/projects/jakhamhelpkadam.svg",
     images: [
-      "/projects/jakhamhelpkadam-1.jpg",
-      "/projects/jakhamhelpkadam-2.jpg",
+      "/images/projects/jakhamhelpkadam-1.svg",
+      "/images/projects/jakhamhelpkadam-2.svg",
     ],
     featured: false,
     year: "2024",
@@ -360,6 +447,11 @@ export const projects: Project[] = [
     duration: "6 months",
     liveUrl: "https://jakhamhelpkadam.com/",
     githubUrl: "",
+    highlights: [
+      { value: "6mo", label: "Maintenance" },
+      { value: "Live", label: "Livewire UX" },
+      { value: "Book", label: "Appointments" },
+    ],
     techStack: ["Laravel", "Livewire", "PHP", "MySQL", "Tailwind CSS"],
     requirements: [
       "Service catalog and booking system",
@@ -380,86 +472,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "8",
-    slug: "liveleanforlongevity-health-coaching",
-    title: "LiveLeanForLongevity - Health Transformation",
-    category: "Health & Wellness",
-    tags: ["Health", "Calculators", "Fitness", "Nutrition"],
-    shortDescription:
-      "6-week health and longevity program with custom VO₂ Max and Biological Age calculators.",
-    description:
-      "A comprehensive health and longevity course focusing on fitness, nutrition, and lifestyle transformation. Developed two custom calculators: VO₂ Max calculator for cardiovascular fitness assessment and Biological Age calculator for health metrics analysis.",
-    thumbnail: "/projects/livelean.jpg",
-    images: [
-      "/projects/livelean-1.jpg",
-      "/projects/livelean-2.jpg",
-    ],
-    featured: false,
-    year: "2024",
-    client: "LiveLeanForLongevity",
-    duration: "2 months",
-    liveUrl: "https://liveleanforlongevity.com/",
-    githubUrl: "",
-    techStack: ["JavaScript", "HTML", "CSS", "PHP"],
-    requirements: [
-      "VO₂ Max calculator with accurate formulas",
-      "Biological Age calculator based on health metrics",
-      "Course information and enrollment system",
-      "Progress tracking for participants",
-      "Educational content delivery",
-      "Mobile-responsive design",
-    ],
-    problemsFaced: [
-      {
-        title: "Complex Calculator Logic",
-        description:
-          "Implementing accurate VO₂ Max and Biological Age calculations with multiple variables and edge cases.",
-        solution:
-          "Researched medical literature for validated formulas and implemented comprehensive input validation with clear user feedback.",
-      },
-    ],
-  },
-  {
-    id: "9",
-    slug: "acre31-wedding-venue",
-    title: "Acre31 - Wedding Barn Venue",
-    category: "Event Venue",
-    tags: ["Laravel", "Blade", "Events", "Showcase"],
-    shortDescription:
-      "Wedding barn event venue website built from scratch showcasing services and facilities.",
-    description:
-      "A beautiful wedding barn website created from scratch using Laravel Blade, showcasing the venue, services, and facilities for wedding events and special occasions.",
-    thumbnail: "/projects/acre31.jpg",
-    images: [
-      "/projects/acre31-1.jpg",
-      "/projects/acre31-2.jpg",
-    ],
-    featured: false,
-    year: "2024",
-    client: "Acre31",
-    duration: "1 month",
-    liveUrl: "https://acre31.com/",
-    githubUrl: "",
-    techStack: ["Laravel", "Blade", "PHP", "MySQL", "Bootstrap"],
-    requirements: [
-      "Venue showcase with photo galleries",
-      "Service packages and pricing information",
-      "Inquiry and booking request forms",
-      "Event calendar and availability",
-      "Testimonials from previous clients",
-      "SEO optimization for local searches",
-    ],
-    problemsFaced: [
-      {
-        title: "Image Gallery Performance",
-        description:
-          "High-resolution venue photos caused slow loading times affecting user experience.",
-        solution:
-          "Implemented lazy loading, image optimization, and responsive images with multiple sizes for different devices.",
-      },
-    ],
-  },
-  {
     id: "10",
     slug: "forex-trading-platform",
     title: "Forex Trading Dashboard",
@@ -469,10 +481,11 @@ export const projects: Project[] = [
       "Forex trading platform with Next.js frontend and hybrid Laravel/Node.js backend (in development).",
     description:
       "A comprehensive forex trading platform currently under development. Features a modern Next.js frontend with a hybrid backend using Laravel for API and Node.js with MongoDB and Express.js for real-time data processing. Built with TypeScript for type safety.",
-    thumbnail: "/projects/forex.jpg",
+    thumbnail:
+      "/images/projects/forex/Screenshot%20from%202026-04-12%2008-27-39.png",
     images: [
-      "/projects/forex-1.jpg",
-      "/projects/forex-2.jpg",
+      "/images/projects/forex/Screenshot%20from%202026-04-12%2008-28-37.png",
+      "/images/projects/forex/Screenshot%20from%202026-04-12%2008-45-25.png",
     ],
     featured: true,
     year: "2024",
@@ -480,6 +493,11 @@ export const projects: Project[] = [
     duration: "Ongoing",
     liveUrl: "https://dev-stage-forex.vercel.app/",
     githubUrl: "",
+    highlights: [
+      { value: "Hybrid", label: "Laravel + Node" },
+      { value: "TS", label: "Type-safe stack" },
+      { value: "Live", label: "Rate streaming" },
+    ],
     techStack: ["Next.js", "Laravel", "Node.js", "MongoDB", "Express.js", "TypeScript", "React"],
     requirements: [
       "Real-time forex data streaming",
@@ -516,10 +534,10 @@ export const projects: Project[] = [
       "React-based deployed portfolio and landing site for showcasing content and services.",
     description:
       "A modern React-built website deployed to showcase content or services. Features a clean design with smooth animations and responsive layout, likely serving as a personal portfolio or informational landing page.",
-    thumbnail: "/projects/foxzai.jpg",
+    thumbnail: "/images/projects/foxzai/Screenshot from 2026-04-12 08-48-31.png",
     images: [
-      "/projects/foxzai-1.jpg",
-      "/projects/foxzai-2.jpg",
+      "/images/projects/foxzai-1.svg",
+      "/images/projects/foxzai-2.svg",
     ],
     featured: false,
     year: "2024",
@@ -527,6 +545,11 @@ export const projects: Project[] = [
     duration: "3 weeks",
     liveUrl: "https://foxzai.com/",
     githubUrl: "",
+    highlights: [
+      { value: "React", label: "Landing stack" },
+      { value: "Fast", label: "Core Web Vitals" },
+      { value: "SEO", label: "Discoverability" },
+    ],
     techStack: ["React", "JavaScript", "CSS", "HTML"],
     requirements: [
       "Modern portfolio design",
@@ -537,5 +560,113 @@ export const projects: Project[] = [
       "Contact form integration",
     ],
     problemsFaced: [],
+  },
+  {
+    id: "12",
+    slug: "euro-collis-logistics",
+    title: "Euro Collis – Logistics & Courier Booking Platform",
+    category: "Logistics & Operations",
+    tags: ["SaaS", "MVP", "Logistics", "Airtable", "Serverless"],
+    shortDescription:
+      "A logistics and courier booking platform MVP with quote comparison and automated workflows.",
+    description:
+      "A logistics and courier booking platform MVP. Allows customers to request shipment quotes, compare courier options, and initiate bookings through an interactive web interface. Integrates serverless APIs, Airtable for data storage, and Brevo/Make.com for automated email workflows. Structured to support future customer and courier portals with role-based access.",
+    thumbnail:
+      "/images/projects/euro-collis/Screenshot from 2026-04-12 08-23-29.png",
+    images: [
+      "/images/projects/euro-collis/Screenshot%20from%202026-04-12%2008-24-25.png",
+      "/images/projects/euro-collis/Screenshot%20from%202026-04-12%2008-24-31.png",
+    ],
+    featured: true,
+    year: "2025",
+    client: "Euro Collis",
+    duration: "In Progress",
+    liveUrl: "",
+    githubUrl: "",
+    highlights: [
+      { value: "MVP", label: "Quote to booking" },
+      { value: "Airtable", label: "Ops data" },
+      { value: "Auto", label: "Email workflows" },
+    ],
+    techStack: ["Next.js", "React.js", "Airtable", "Brevo", "Serverless"],
+    requirements: [
+      "Customer shipment quote request system",
+      "Courier comparison interface",
+      "Booking initiation workflow",
+      "Airtable integration for data management",
+      "Automated email workflows via Brevo and Make.com",
+      "Serverless API architecture",
+      "Future-ready for customer and courier portals",
+      "Role-based access control foundation",
+    ],
+    problemsFaced: [
+      {
+        title: "Serverless Architecture Design",
+        description:
+          "Designing a scalable serverless architecture that could handle quote requests and integrate with multiple third-party services.",
+        solution:
+          "Implemented API routes with Next.js serverless functions, using Airtable as a flexible database and Make.com for workflow automation.",
+      },
+      {
+        title: "Email Automation Complexity",
+        description:
+          "Managing complex email workflows for quote requests, confirmations, and notifications across different user roles.",
+        solution:
+          "Leveraged Brevo for transactional emails and Make.com for advanced workflow automation with conditional logic and multi-step processes.",
+      },
+    ],
+  },
+  {
+    id: "14",
+    slug: "liveleanforlongevity-calculators",
+    title: "LiveLeanForLongevity – Health & Longevity Assessment Tools",
+    category: "Health & Wellness",
+    tags: ["JavaScript", "Health Calculators", "VO₂ Max", "Biological Age"],
+    shortDescription:
+      "Custom JavaScript health calculators for VO₂ Max and biological age assessment.",
+    description:
+      "Custom JavaScript health calculators integrated into a health and lifestyle coaching platform. Built a VO₂ Max (1-Mile Walk Test) calculator and a Longevity / Biological Age tracker using validated fitness formulas. Transforms user inputs into meaningful health insights.",
+    thumbnail: "/images/projects/liveleanforlongevity/Screenshot from 2026-04-12 09-07-52.png",
+    images: [
+      "/images/projects/livelean-calculators-1.svg",
+      "/images/projects/livelean-calculators-2.svg",
+    ],
+    featured: false,
+    year: "2024",
+    client: "LiveLeanForLongevity",
+    duration: "Completed",
+    liveUrl: "https://liveleanforlongevity.com/",
+    githubUrl: "",
+    highlights: [
+      { value: "VO₂", label: "Walk test calc" },
+      { value: "Age", label: "Biological tracker" },
+      { value: "JS", label: "Client-side logic" },
+    ],
+    techStack: ["JavaScript", "Custom Web Calculators", "Health Data Modeling"],
+    requirements: [
+      "VO₂ Max calculator using 1-Mile Walk Test formula",
+      "Biological Age / Longevity tracker",
+      "Validated fitness and health formulas",
+      "User-friendly input interface",
+      "Clear health insights and results display",
+      "Mobile-responsive design",
+      "Integration with existing platform",
+    ],
+    problemsFaced: [
+      {
+        title: "Formula Accuracy and Validation",
+        description:
+          "Implementing medically accurate VO₂ Max and biological age calculations required extensive research and validation.",
+        solution:
+          "Researched peer-reviewed medical literature for validated formulas, implemented comprehensive input validation, and tested against known benchmarks.",
+      },
+      {
+        title: "User Input Handling",
+        description:
+          "Managing various user inputs (age, weight, time, heart rate) with proper validation and error handling.",
+        solution:
+          "Built robust input validation with real-time feedback, clear error messages, and sensible default values to guide users.",
+      },
+    ],
   },
 ];

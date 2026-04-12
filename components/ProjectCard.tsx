@@ -1,23 +1,29 @@
 import Link from "next/link";
+import ProjectImage from "@/components/ProjectImage";
 import { FaArrowRight } from "react-icons/fa6";
 import type { Project } from "@/data/projects";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Link href={`/projects/${project.slug}`} className="group block">
-      <div className="rounded-2xl bg-card border border-border overflow-hidden card-hover">
+    <Link href={`/projects/${project.slug}`} className="block">
+      <div className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:border-white/20 hover:shadow-lg hover:shadow-violet-900/20">
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 z-[25] h-[2px] rounded-t-2xl bg-gradient-to-r from-sky-400 via-violet-500 to-fuchsia-500 opacity-0 transition-opacity group-hover:opacity-100"
+          aria-hidden
+        />
         {/* Thumbnail */}
-        <div className="relative h-48 bg-gradient-to-br from-accent/15 to-accent-secondary/15 flex items-center justify-center overflow-hidden">
-          <div className="text-center">
-            <div className="w-16 h-16 mx-auto rounded-xl bg-accent/20 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300">
-              <span className="text-2xl font-bold gradient-text">
-                {project.title.charAt(0)}
-              </span>
-            </div>
-            <span className="text-xs text-text-muted">{project.category}</span>
+        <div className="relative h-56 bg-gradient-to-br from-accent/15 to-accent-secondary/15 overflow-hidden">
+          <ProjectImage
+            src={project.thumbnail}
+            alt={project.title}
+            fill
+            className="object-contain p-4 group-hover:scale-[1.04] transition-transform duration-300 ease-out"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+          <div className="absolute top-3 left-3 px-2 py-1 rounded-lg bg-background/85 backdrop-blur-sm text-[10px] font-semibold uppercase tracking-wide text-accent border border-accent/25 z-10 max-w-[calc(100%-5rem)] truncate">
+            {1 + project.images.length} screens
           </div>
-          {/* Year badge */}
-          <div className="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-background/80 backdrop-blur-sm text-xs font-medium text-text-muted border border-border">
+          <div className="absolute top-3 right-3 px-2.5 py-1 rounded-lg bg-background/80 backdrop-blur-sm text-xs font-medium text-text-muted border border-border z-10">
             {project.year}
           </div>
         </div>

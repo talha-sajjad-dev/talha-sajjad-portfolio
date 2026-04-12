@@ -10,15 +10,13 @@ export const skills: Skill[] = [
   { name: "Next.js", icon: "SiNextdotjs", category: "Frontend" },
   { name: "JavaScript", icon: "SiJavascript", category: "Frontend" },
   { name: "HTML5", icon: "SiHtml5", category: "Frontend" },
-  { name: "CSS3", icon: "SiCss3", category: "Frontend" },
+  { name: "CSS3", icon: "SiCss", category: "Frontend" },
   { name: "Tailwind CSS", icon: "SiTailwindcss", category: "Frontend" },
   { name: "Bootstrap", icon: "SiBootstrap", category: "Frontend" },
 
   // Backend
   { name: "Node.js", icon: "FaNodeJs", category: "Backend" },
   { name: "Express.js", icon: "SiExpress", category: "Backend" },
-  { name: "PHP", icon: "FaPhp", category: "Backend" },
-  { name: "Laravel", icon: "SiLaravel", category: "Backend" },
 
   // Database
   { name: "MongoDB", icon: "SiMongodb", category: "Backend" },
@@ -35,5 +33,4 @@ export const skills: Skill[] = [
   { name: "JWT Auth", icon: "SiJsonwebtokens", category: "Backend" },
   { name: "Stripe", icon: "SiStripe", category: "Tools" },
   { name: "Socket.IO", icon: "SiSocketdotio", category: "Backend" },
-  { name: "Livewire", icon: "SiLivewire", category: "Backend" },
 ];

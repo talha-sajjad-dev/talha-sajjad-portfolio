@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Modapaya product page placeholder">
+  <defs>
+    <linearGradient id="mp3-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0d18"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#mp3-bg)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="14" fill="#12121a" stroke="#2a2840" stroke-width="2"/>
+  <rect x="60" y="72" width="1080" height="48" rx="8" fill="#0a0a0f" stroke="#1e1e2d"/>
+  <rect x="60" y="140" width="360" height="430" rx="10" fill="#16161f" stroke="#2a2a3d"/>
+  <rect x="88" y="172" width="304" height="240" rx="8" fill="#1a1a25"/>
+  <rect x="88" y="430" width="200" height="14" rx="3" fill="#3a3a4d"/>
+  <rect x="88" y="456" width="160" height="24" rx="6" fill="#6c63ff" opacity="0.45"/>
+  <rect x="448" y="140" width="692" height="430" rx="10" fill="#0a0a0f" stroke="#1e1e2d"/>
+  <rect x="488" y="180" width="400" height="22" rx="5" fill="#2a2a3d"/>
+  <rect x="488" y="220" width="612" height="12" rx="3" fill="#2a2a3d"/>
+  <rect x="488" y="244" width="580" height="12" rx="3" fill="#2a2a3d"/>
+  <rect x="488" y="268" width="540" height="12" rx="3" fill="#2a2a3d"/>
+  <rect x="488" y="320" width="612" height="180" rx="8" fill="#16161f" stroke="#2a2a3d"/>
+  <text x="600" y="608" text-anchor="middle" fill="#8888a0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="600">Product detail · Screenshot slot</text>
+</svg>

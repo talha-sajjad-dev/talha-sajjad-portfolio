@@ -1,38 +1,61 @@
-import { FaCode, FaServer, FaPalette } from "react-icons/fa6";
+import { FaCode, FaPalette, FaServer } from "react-icons/fa6";
+
+const traits = [
+  "Problem Solver",
+  "Detail-Oriented",
+  "Team Player",
+  "Fast Learner",
+  "Clean Code",
+];
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative py-24 noise-bg">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Left: Text */}
-          <div>
-            <span className="text-accent text-sm font-semibold uppercase tracking-widest">
-              About Me
+    <section id="about" className="relative pt-0 pb-24 noise-bg">
+      <div className="mx-auto max-w-7xl px-6">
+        {/* Header — mesh only */}
+        <div className="relative mb-12 overflow-hidden rounded-2xl">
+          <div
+            className="featured-bento-mesh pointer-events-none absolute inset-0 -z-0"
+            aria-hidden
+          />
+          <div className="noise-bg relative z-10 px-4 py-10 text-left md:px-8">
+            <span className="featured-section-label block text-xs font-bold uppercase tracking-widest">
+              ABOUT ME
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-6">
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-white md:text-4xl">
               Passionate about creating{" "}
-              <span className="gradient-text">exceptional</span> digital products
+              <span className="bg-gradient-to-r from-sky-400 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
+                exceptional
+              </span>{" "}
+              digital products
             </h2>
-            <p className="text-text-secondary leading-relaxed mb-6">
+          </div>
+        </div>
+
+        <div className="grid items-start gap-16 md:grid-cols-2">
+          {/* Left */}
+          <div className="text-left">
+            <p className="leading-relaxed text-text-secondary mb-6">
               I&apos;m a MERN Stack developer with 1 year of experience building
-              production-ready web applications. I specialize in developing scalable
-              e-commerce platforms and CRM systems with a focus on secure authentication,
-              payment integrations, and performance optimization.
+              production-ready web applications. I specialize in developing
+              scalable e-commerce platforms and CRM systems with a focus on
+              secure authentication, payment integrations, and performance
+              optimization.
             </p>
-            <p className="text-text-secondary leading-relaxed mb-8">
-              From multi-vendor marketplaces to health consultation platforms, I&apos;ve
-              delivered 20+ real-world applications. I excel at building dynamic frontends,
-              scalable backend systems, and handling full application workflows from
-              development to deployment. My code is clean, maintainable, and focused on
-              solving real business problems.
+            <p className="leading-relaxed text-text-secondary mb-8">
+              From multi-vendor marketplaces to health consultation platforms,
+              I&apos;ve delivered 20+ real-world applications. I excel at
+              building dynamic frontends, scalable backend systems, and handling
+              full application workflows from development to deployment. My code
+              is clean, maintainable, and focused on solving real business
+              problems.
             </p>
 
             <div className="flex flex-wrap gap-3">
-              {["Problem Solver", "Detail-Oriented", "Team Player", "Fast Learner"].map((trait) => (
+              {traits.map((trait) => (
                 <span
                   key={trait}
-                  className="px-4 py-1.5 rounded-full text-sm bg-accent/10 text-accent border border-accent/20"
+                  className="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/90 transition-colors hover:border-violet-500/40"
                 >
                   {trait}
                 </span>
@@ -40,35 +63,35 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Right: Cards */}
+          {/* Right — service cards */}
           <div className="space-y-4">
             {[
               {
-                icon: <FaCode className="text-accent" size={22} />,
+                icon: <FaCode className="text-white" size={18} />,
                 title: "Frontend Development",
                 desc: "Building responsive and dynamic UIs with React.js, Next.js, JavaScript, HTML, CSS, Tailwind, and Bootstrap.",
               },
               {
-                icon: <FaServer className="text-accent-secondary" size={22} />,
+                icon: <FaServer className="text-white" size={18} />,
                 title: "Backend & APIs",
                 desc: "Developing scalable REST APIs with Node.js, Express.js, and handling full application workflows with MongoDB and MySQL.",
               },
               {
-                icon: <FaPalette className="text-[#ff6b9d]" size={22} />,
+                icon: <FaPalette className="text-white" size={18} />,
                 title: "Authentication & Payments",
                 desc: "Implementing secure JWT authentication, OAuth, and integrating Stripe payment gateways for seamless transactions.",
               },
             ].map((card) => (
               <div
                 key={card.title}
-                className="flex gap-5 p-6 rounded-2xl bg-card border border-border card-hover"
+                className="flex gap-4 rounded-xl border border-white/10 bg-white/[0.05] p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-white/20"
               >
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500/80 to-sky-500/50 shadow-inner">
                   {card.icon}
                 </div>
-                <div>
-                  <h3 className="font-semibold mb-1">{card.title}</h3>
-                  <p className="text-sm text-text-muted">{card.desc}</p>
+                <div className="min-w-0 text-left">
+                  <h3 className="mb-1 font-semibold text-white">{card.title}</h3>
+                  <p className="text-sm text-white/60">{card.desc}</p>
                 </div>
               </div>
             ))}

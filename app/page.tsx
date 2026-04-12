@@ -3,7 +3,7 @@ import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import SkillsSection from "@/components/SkillsSection";
 import FeaturedProjects from "@/components/FeaturedProjects";
-import ReviewsCarousel from "@/components/ReviewsCarousel";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <div className="section-divider" />
       <FeaturedProjects />
       <div className="section-divider" />
-      <ReviewsCarousel />
+      <TestimonialsSection />
     </>
   );
 }
