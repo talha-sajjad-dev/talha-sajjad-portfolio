@@ -1,6 +1,6 @@
 "use client";
 
-import { projects, type Project } from "@/data/projects";
+import { visibleProjects, type Project } from "@/data/projects";
 import Link from "next/link";
 import ProjectImage from "@/components/ProjectImage";
 import { motion } from "framer-motion";
@@ -331,7 +331,7 @@ function BentoCard({
 }
 
 export default function FeaturedProjects() {
-  const featured = projects.filter((p) => p.featured);
+  const featured = visibleProjects.filter((p) => p.featured);
   const [primary, secondary, tertiary] = featured;
 
   if (!primary) return null;

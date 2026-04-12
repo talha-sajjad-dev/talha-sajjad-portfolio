@@ -1,4 +1,4 @@
-import { projects } from "@/data/projects";
+import { projects, visibleProjects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import ProjectGallery from "@/components/ProjectGallery";
@@ -84,7 +84,7 @@ function browserBarUrl(liveUrl: string | undefined) {
 }
 
 export async function generateStaticParams() {
-  return projects.map((p) => ({ slug: p.slug }));
+  return visibleProjects.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -94,7 +94,7 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
-  if (!project) return { title: "Project Not Found" };
+  if (!project || project.hidden) return { title: "Project Not Found" };
   return {
     title: `${project.title} — Talha | Portfolio`,
     description: project.shortDescription,
@@ -109,7 +109,7 @@ export default async function ProjectDetailPage({
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
 
-  if (!project) notFound();
+  if (!project || project.hidden) notFound();
 
   const { rest: titleRest, last: titleLast } = titleLastWordGradient(
     project.title

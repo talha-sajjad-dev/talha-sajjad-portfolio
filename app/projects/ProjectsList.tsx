@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { projects } from "@/data/projects";
+import { visibleProjects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 
 export default function ProjectsList() {
@@ -10,8 +10,8 @@ export default function ProjectsList() {
 
   const filtered =
     activeCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
+      ? visibleProjects
+      : visibleProjects.filter((p) => p.category === activeCategory);
 
   if (filtered.length === 0) {
     return (

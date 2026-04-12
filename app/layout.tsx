@@ -4,9 +4,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Talha Sajjad — MERN Stack Developer Portfolio",
+  title: "Talha Sajjad - Full Stack MERN Developer Portfolio",
   description:
-    "MERN Stack developer specializing in React, Next.js, Node.js, and Laravel. Building scalable e-commerce platforms, CRM systems, and production-ready web applications.",
+    "Full Stack MERN Stack developer specializing in React, Next.js, Node.js, and Laravel. Building scalable e-commerce platforms, CRM systems, and production-ready web applications.",
 };
 
 export default function RootLayout({

@@ -23,6 +23,8 @@ export interface Project {
   }[];
   /** Three headline stats for featured bento “Project highlights” grid */
   highlights?: { value: string; label: string }[];
+  /** When set, omitted from listings, featured grid, and detail URL returns 404 */
+  hidden?: boolean;
 }
 
 export const categories = [
@@ -102,8 +104,12 @@ export const projects: Project[] = [
       "Frontend of a luxury wedding and event venue website built with Next.js and React.js. Responsive pages showcasing venue services, galleries, and event information. Modern UI with Tailwind CSS ensuring seamless experience across all devices. Backend built on Laravel.",
     thumbnail: "/images/projects/acre31/Screenshot from 2026-04-12 08-19-54.png",
     images: [
-      "/images/projects/acre31-frontend-1.svg",
-      "/images/projects/acre31-frontend-2.svg",
+      "/images/projects/acre31/Screenshot from 2026-04-12 08-20-24.png",
+      "/images/projects/acre31/Screenshot from 2026-04-12 08-20-42.png",
+      "/images/projects/acre31/Screenshot from 2026-04-12 08-21-04.png",
+      "/images/projects/acre31/Screenshot from 2026-04-12 08-21-26.png",
+      "/images/projects/acre31/Screenshot from 2026-04-12 08-21-52.png",
+      "/images/projects/acre31/Screenshot from 2026-04-12 08-22-15.png",
     ],
     featured: true,
     year: "2024",
@@ -155,9 +161,9 @@ export const projects: Project[] = [
       "A comprehensive multi-vendor e-commerce platform for custom rhinestone and bling apparel. Worked extensively on migrating from ZCart to Shofy platform, implementing complex features including multi-role chat system (vendor/user/admin), Excel-based bulk product & category uploads with variant support, custom quote management system, order creation workflow, shipping integration with Shippo, and payment processing with Stripe/PayPal. The platform supports custom orders, wholesale inquiries, and cross-platform listing to Etsy, TikTok, and other marketplaces.",
     thumbnail: "/images/projects/modapaya/home.png",
     images: [
-      "/images/projects/modapaya/home.png",
-      "/images/projects/modapaya/product-page.png",
       "/images/projects/modapaya/category.png",
+      "/images/projects/modapaya/product-page.png",
+      "/images/projects/modapaya/featured.png",
     ],
     featured: false,
     year: "2024-2025",
@@ -242,10 +248,17 @@ export const projects: Project[] = [
     description:
       "A comprehensive wholesale platform for jewelry findings, beads, and chains. Provided hourly maintenance, adding new features and fixing bugs for nearly one year. Built with Next.js frontend and Symfony backend, handling large product catalogs and bulk ordering.",
     thumbnail:
-      "/images/projects/gempacked/Screenshot%20from%202026-04-12%2008-50-04.png",
+      "/images/projects/gempacked/Screenshot from 2026-04-12 08-50-04.png",
     images: [
-      "/images/projects/gempacked/Screenshot%20from%202026-04-12%2008-51-53.png",
-      "/images/projects/gempacked/Screenshot%20from%202026-04-12%2008-52-05.png",
+      "/images/projects/gempacked/Screenshot from 2026-04-12 08-50-10.png",
+      "/images/projects/gempacked/Screenshot from 2026-04-12 08-50-20.png",
+      "/images/projects/gempacked/Screenshot from 2026-04-12 08-50-42.png",
+      "/images/projects/gempacked/Screenshot from 2026-04-12 08-50-56.png",
+      "/images/projects/gempacked/Screenshot from 2026-04-12 08-51-14.png",
+      "/images/projects/gempacked/Screenshot from 2026-04-12 08-51-29.png",
+      "/images/projects/gempacked/Screenshot from 2026-04-12 08-51-53.png",
+      "/images/projects/gempacked/Screenshot from 2026-04-12 08-52-05.png",
+      "/images/projects/gempacked/Screenshot from 2026-04-12 08-52-20.png",
     ],
     featured: true,
     year: "2024",
@@ -296,8 +309,11 @@ export const projects: Project[] = [
       "A comprehensive CRM platform offering leads management, project task tracking, invoicing, and team management. Fixed critical 505 errors on various pages and improved system stability. Built with CodeIgniter framework.",
     thumbnail: "/images/projects/bilvok/Screenshot from 2026-04-12 09-02-23.png",
     images: [
-      "/images/projects/billvok-1.svg",
-      "/images/projects/billvok-2.svg",
+      "/images/projects/bilvok/Screenshot from 2026-04-12 09-02-32.png",
+      "/images/projects/bilvok/Screenshot from 2026-04-12 09-02-36.png",
+      "/images/projects/bilvok/Screenshot from 2026-04-12 09-02-49.png",
+      "/images/projects/bilvok/Screenshot from 2026-04-12 09-03-31.png",
+      "/images/projects/bilvok/Screenshot from 2026-04-12 09-03-39.png",
     ],
     featured: false,
     year: "2024",
@@ -341,8 +357,8 @@ export const projects: Project[] = [
       "A professional wellness hub that connects users with health and fitness experts in multiple languages. Offers online consultations and training plans. Implemented comprehensive multi-language support using CodeIgniter framework.",
     thumbnail: "/images/projects/goalvalor/Screenshot from 2026-04-12 09-12-04.png",
     images: [
-      "/images/projects/goalvalor-1.svg",
-      "/images/projects/goalvalor-2.svg",
+      "/images/projects/goalvalor/Screenshot from 2026-04-12 09-12-13.png",
+      "/images/projects/goalvalor/Screenshot from 2026-04-12 09-12-21.png",
     ],
     featured: false,
     year: "2024",
@@ -389,6 +405,7 @@ export const projects: Project[] = [
       "/images/projects/hqsleep/report-1.svg",
       "/images/projects/hqsleep/report-2.svg",
     ],
+    hidden: true,
     featured: true,
     year: "2024",
     client: "HQSleep",
@@ -441,6 +458,7 @@ export const projects: Project[] = [
       "/images/projects/jakhamhelpkadam-1.svg",
       "/images/projects/jakhamhelpkadam-2.svg",
     ],
+    hidden: true,
     featured: false,
     year: "2024",
     client: "JakhamHelpKadam",
@@ -482,10 +500,16 @@ export const projects: Project[] = [
     description:
       "A comprehensive forex trading platform currently under development. Features a modern Next.js frontend with a hybrid backend using Laravel for API and Node.js with MongoDB and Express.js for real-time data processing. Built with TypeScript for type safety.",
     thumbnail:
-      "/images/projects/forex/Screenshot%20from%202026-04-12%2008-27-39.png",
+      "/images/projects/forex/Screenshot from 2026-04-12 08-27-39.png",
     images: [
-      "/images/projects/forex/Screenshot%20from%202026-04-12%2008-28-37.png",
-      "/images/projects/forex/Screenshot%20from%202026-04-12%2008-45-25.png",
+      "/images/projects/forex/Screenshot from 2026-04-12 08-27-46.png",
+      "/images/projects/forex/Screenshot from 2026-04-12 08-27-56.png",
+      "/images/projects/forex/Screenshot from 2026-04-12 08-28-22.png",
+      "/images/projects/forex/Screenshot from 2026-04-12 08-28-37.png",
+      "/images/projects/forex/Screenshot from 2026-04-12 08-45-25.png",
+      "/images/projects/forex/Screenshot from 2026-04-12 08-45-47.png",
+      "/images/projects/forex/Screenshot from 2026-04-12 08-46-00.png",
+      "/images/projects/forex/Screenshot from 2026-04-12 08-46-27.png",
     ],
     featured: true,
     year: "2024",
@@ -536,8 +560,9 @@ export const projects: Project[] = [
       "A modern React-built website deployed to showcase content or services. Features a clean design with smooth animations and responsive layout, likely serving as a personal portfolio or informational landing page.",
     thumbnail: "/images/projects/foxzai/Screenshot from 2026-04-12 08-48-31.png",
     images: [
-      "/images/projects/foxzai-1.svg",
-      "/images/projects/foxzai-2.svg",
+      "/images/projects/foxzai/Screenshot from 2026-04-12 08-48-57.png",
+      "/images/projects/foxzai/Screenshot from 2026-04-12 08-49-10.png",
+      "/images/projects/foxzai/Screenshot from 2026-04-12 08-49-16.png",
     ],
     featured: false,
     year: "2024",
@@ -574,8 +599,13 @@ export const projects: Project[] = [
     thumbnail:
       "/images/projects/euro-collis/Screenshot from 2026-04-12 08-23-29.png",
     images: [
-      "/images/projects/euro-collis/Screenshot%20from%202026-04-12%2008-24-25.png",
-      "/images/projects/euro-collis/Screenshot%20from%202026-04-12%2008-24-31.png",
+      "/images/projects/euro-collis/Screenshot from 2026-04-12 08-23-44.png",
+      "/images/projects/euro-collis/Screenshot from 2026-04-12 08-24-25.png",
+      "/images/projects/euro-collis/Screenshot from 2026-04-12 08-24-31.png",
+      "/images/projects/euro-collis/Screenshot from 2026-04-12 08-24-39.png",
+      "/images/projects/euro-collis/Screenshot from 2026-04-12 08-25-19.png",
+      "/images/projects/euro-collis/Screenshot from 2026-04-12 08-25-57.png",
+      "/images/projects/euro-collis/Screenshot from 2026-04-12 08-26-12.png",
     ],
     featured: true,
     year: "2025",
@@ -628,8 +658,11 @@ export const projects: Project[] = [
       "Custom JavaScript health calculators integrated into a health and lifestyle coaching platform. Built a VO₂ Max (1-Mile Walk Test) calculator and a Longevity / Biological Age tracker using validated fitness formulas. Transforms user inputs into meaningful health insights.",
     thumbnail: "/images/projects/liveleanforlongevity/Screenshot from 2026-04-12 09-07-52.png",
     images: [
-      "/images/projects/livelean-calculators-1.svg",
-      "/images/projects/livelean-calculators-2.svg",
+      "/images/projects/liveleanforlongevity/Screenshot from 2026-04-12 09-05-23.png",
+      "/images/projects/liveleanforlongevity/Screenshot from 2026-04-12 09-05-29.png",
+      "/images/projects/liveleanforlongevity/Screenshot from 2026-04-12 09-06-25.png",
+      "/images/projects/liveleanforlongevity/Screenshot from 2026-04-12 09-06-38.png",
+      "/images/projects/liveleanforlongevity/Screenshot from 2026-04-12 09-07-58.png",
     ],
     featured: false,
     year: "2024",
@@ -670,3 +703,5 @@ export const projects: Project[] = [
     ],
   },
 ];
+
+export const visibleProjects = projects.filter((p) => !p.hidden);
