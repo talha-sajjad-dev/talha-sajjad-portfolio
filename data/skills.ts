@@ -32,5 +32,10 @@ export const skills: Skill[] = [
   { name: "REST APIs", icon: "SiPostman", category: "Backend" },
   { name: "JWT Auth", icon: "SiJsonwebtokens", category: "Backend" },
   { name: "Stripe", icon: "SiStripe", category: "Tools" },
+  { name: "PayPal", icon: "FaPaypal", category: "Tools" },
+  { name: "Cloudinary", icon: "SiCloudinary", category: "Tools" },
+  { name: "Google OAuth", icon: "SiGoogle", category: "Backend" },
+  { name: "Joi", icon: "SiPostman", category: "Backend" },
+  { name: "Postman", icon: "SiPostman", category: "Tools" },
   { name: "Socket.IO", icon: "SiSocketdotio", category: "Backend" },
 ];

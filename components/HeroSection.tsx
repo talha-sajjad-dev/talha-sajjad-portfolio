@@ -15,7 +15,7 @@ const GITHUB_HREF = "https://github.com/talha-sajjad-dev";
 
 const stats = [
   { value: "1+", label: "Years Experience" },
-  { value: "20+", label: "Projects Delivered" },
+  { value: "Real-World", label: "Web Applications" },
   { value: "100%", label: "Client Satisfaction" },
 ];
 
@@ -64,9 +64,10 @@ export default function HeroSection() {
             className="mt-6 max-w-lg text-left text-white/60 animate-fade-in-up"
             style={{ animationDelay: "0.15s" }}
           >
-            Full-stack developer with 1+ year of experience building scalable
-            e-commerce platforms, CRM systems, and SaaS tools using React,
-            Node.js, Express, and MongoDB.
+            MERN Stack Developer with 1+ year of experience building real-world
+            web applications including e-commerce platforms, CRM systems, and
+            SaaS tools. Skilled in secure authentication, payment integration,
+            and real-time features.
           </p>
 
           <div

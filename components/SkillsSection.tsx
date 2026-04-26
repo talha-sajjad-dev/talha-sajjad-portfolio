@@ -6,6 +6,7 @@ import {
   FaNodeJs,
   FaGitAlt,
   FaGithub,
+  FaPaypal,
 } from "react-icons/fa6";
 import {
   SiNextdotjs,
@@ -24,6 +25,8 @@ import {
   SiJsonwebtokens,
   SiStripe,
   SiSocketdotio,
+  SiCloudinary,
+  SiGoogle,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 import { useState } from "react";
@@ -33,6 +36,7 @@ const iconMap: Record<string, IconType> = {
   FaNodeJs,
   FaGitAlt,
   FaGithub,
+  FaPaypal,
   SiNextdotjs,
   SiJavascript,
   SiHtml5,
@@ -48,6 +52,8 @@ const iconMap: Record<string, IconType> = {
   SiJsonwebtokens,
   SiStripe,
   SiSocketdotio,
+  SiCloudinary,
+  SiGoogle,
 };
 
 /** Brand colors for specific skills (rest use category tint). */
@@ -58,6 +64,9 @@ const skillBrandColors: Partial<Record<string, string>> = {
   Netlify: "#00c7b7",
   "JWT Auth": "#d63aff",
   Stripe: "#635bff",
+  PayPal: "#003087",
+  Cloudinary: "#3448c5",
+  "Google OAuth": "#4285f4",
   "Socket.IO": "#ffffff",
 };
 

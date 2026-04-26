@@ -12,38 +12,29 @@ interface TimelineItem {
 const timeline: TimelineItem[] = [
   {
     type: "work",
-    role: "Full Stack Developer",
-    company: "Freelance / Self-Employed",
-    period: "Jan 2025 — Present",
+    role: "MERN Stack Developer",
+    company: "Suffa Tech",
+    period: "Mar 2025 — Mar 2026",
     description:
-      "Delivering scalable web applications for startups and businesses across e-commerce, CRM, and SaaS verticals. Built 20+ production-ready applications using React, Node.js, Express, and MongoDB. Designed RESTful APIs (100+ endpoints) with modular, layered architecture. Integrated Stripe and PayPal payment gateways with secure webhook handling. Implemented JWT authentication, Google OAuth, OTP recovery, and role-based access control. Developed real-time chat features using Socket.IO. Optimized performance using MongoDB indexing and aggregation pipelines.",
-    tech: ["React", "Next.js", "Node.js", "MongoDB", "Express.js", "Stripe"],
+      "Worked on multiple web applications including e-commerce and CRM systems. Built MERN applications with REST APIs and modular architecture. Implemented JWT authentication, Google OAuth, and role-based access control. Integrated Stripe and PayPal payment gateways with webhook handling, and developed real-time chat features using Socket.IO.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Socket.IO"],
   },
   {
     type: "work",
-    role: "Full Stack Developer",
-    company: "Modapaya",
-    period: "Mar 2025 — Nov 2025",
+    role: "JavaScript Developer",
+    company: "ALPHASOFT360",
+    period: "Sep 2024 — Mar 2025",
     description:
-      "Worked on Modapaya, a custom fashion eCommerce platform specializing in rhinestone and bling apparel. Built multi-role chat system (Admin, Vendor, User). Developed bulk product and category upload workflows via Excel. Improved UI/UX, resolved frontend issues, and optimized performance. Worked alongside Laravel backend.",
-    tech: ["JavaScript", "Frontend", "Bootstrap", "Chat System", "Excel Integration"],
-  },
-  {
-    type: "work",
-    role: "Full Stack Web Developer",
-    company: "Gempacked – Wholesale Jewelry Parts and Beads",
-    period: "Mar 2024 — Jan 2025",
-    description:
-      "Worked on a wholesale jewelry eCommerce platform (Next.js + Symfony). Implemented and refined user interfaces, fixed UI/UX issues, improved frontend performance, and maintained clean scalable code. Provided nearly 1 year of production support and feature additions.",
-    tech: ["Next.js", "Symfony", "PHP", "MySQL"],
+      "Maintained and enhanced a large-scale e-commerce platform. Developed new features, resolved critical bugs, and optimized backend workflows to improve reliability and overall performance.",
+    tech: ["JavaScript", "E-commerce", "Bug Fixing", "Workflow Optimization"],
   },
   {
     type: "education",
-    role: "Bachelor of Science in Information Technology",
-    company: "Concordia Colleges / Bahauddin Zakariya University, Multan",
-    period: "Oct 2022 — Oct 2026 (Expected)",
+    role: "Bachelor's in Computer Science",
+    company: "Bahauddin Zakariya University",
+    period: "2022 — 2026 (Final Year)",
     description:
-      "Currently pursuing Bachelor's degree in Information Technology with a focus on software engineering, web technologies, and full-stack development. Maintaining A+ grade while building practical real-world projects.",
+      "Currently pursuing a Computer Science degree while building practical full-stack applications and strengthening software engineering fundamentals.",
   },
 ];
 

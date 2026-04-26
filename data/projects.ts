@@ -42,13 +42,13 @@ export const projects: Project[] = [
   {
     id: "1",
     slug: "mern-ecommerce-platform",
-    title: "MERN E-commerce Platform",
+    title: "Multi-vendor MarketPlace",
     category: "E-Commerce",
     tags: ["E-Commerce", "MERN", "Stripe", "Socket.IO"],
     shortDescription:
-      "Full-stack multi-vendor marketplace with JWT authentication, Stripe payments, and real-time chat.",
+      "Full-stack marketplace with user, seller, and admin roles, integrated payments, and real-time communication.",
     description:
-      "A scalable multi-vendor e-commerce platform built using the MERN stack. Features include JWT and OAuth authentication with role-based access control, integrated Stripe and PayPal for secure payment processing, real-time chat using Socket.IO for buyer-seller communication, and optimized performance with Cloudinary image handling and efficient API design.",
+      "A full-stack multi-vendor marketplace built with user, seller, and admin roles. Implemented secure JWT authentication, real-time chat with Socket.IO, and integrated Stripe, PayPal, and COD with backend validation. APIs were designed with a modular REST approach and optimized database queries for performance.",
     thumbnail: "/images/projects/mern-shop/home.png",
     images: [
       "/images/projects/mern-shop/product.png",
@@ -95,13 +95,13 @@ export const projects: Project[] = [
   {
     id: "13",
     slug: "acre31-wedding-venue-frontend",
-    title: "Acre31 – Wedding & Event Venue Website",
+    title: "Acre31 – Booking Platform",
     category: "Hospitality & Bookings",
     tags: ["Next.js", "React.js", "Tailwind CSS", "Event Bookings", "Venue"],
     shortDescription:
-      "Luxury wedding and event venue site with inquiry and booking-focused UX, modern UI, and responsive design.",
+      "Wedding venue booking system with scheduling logic, booking workflows, and email notifications.",
     description:
-      "Frontend of a luxury wedding and event venue website built with Next.js and React.js. Responsive pages showcasing venue services, galleries, and event information. Modern UI with Tailwind CSS ensuring seamless experience across all devices. Backend built on Laravel.",
+      "Booking platform for a wedding and event venue with scheduling-oriented flows. Implemented streamlined booking workflows and email notifications, while keeping the frontend responsive and user-friendly with Next.js and React.",
     thumbnail: "/images/projects/acre31/Screenshot from 2026-04-12 08-19-54.png",
     images: [
       "/images/projects/acre31/Screenshot from 2026-04-12 08-20-24.png",
@@ -589,13 +589,13 @@ export const projects: Project[] = [
   {
     id: "12",
     slug: "euro-collis-logistics",
-    title: "Euro Collis – Logistics & Courier Booking Platform",
+    title: "Euro Collis – Logistics Platform (MVP)",
     category: "Logistics & Operations",
     tags: ["SaaS", "MVP", "Logistics", "Airtable", "Serverless"],
     shortDescription:
-      "A logistics and courier booking platform MVP with quote comparison and automated workflows.",
+      "Logistics booking MVP with shipment flow, courier comparison, and request handling.",
     description:
-      "A logistics and courier booking platform MVP. Allows customers to request shipment quotes, compare courier options, and initiate bookings through an interactive web interface. Integrates serverless APIs, Airtable for data storage, and Brevo/Make.com for automated email workflows. Structured to support future customer and courier portals with role-based access.",
+      "A logistics booking MVP that supports shipment request flow, courier comparison, and booking initiation. Built with a clean workflow-first approach using API integrations and automation tools to streamline request handling.",
     thumbnail:
       "/images/projects/euro-collis/Screenshot from 2026-04-12 08-23-29.png",
     images: [

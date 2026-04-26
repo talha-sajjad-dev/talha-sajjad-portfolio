@@ -36,19 +36,18 @@ export default function AboutSection() {
           {/* Left */}
           <div className="text-left">
             <p className="leading-relaxed text-text-secondary mb-6">
-              I&apos;m a MERN Stack developer with 1 year of experience building
-              production-ready web applications. I specialize in developing
-              scalable e-commerce platforms and CRM systems with a focus on
-              secure authentication, payment integrations, and performance
-              optimization.
+              I&apos;m a MERN Stack Developer with 1+ year of experience
+              building real-world web applications including e-commerce
+              platforms, CRM systems, and SaaS tools. I focus on secure
+              authentication, payment integration, and scalable backend
+              architecture.
             </p>
             <p className="leading-relaxed text-text-secondary mb-8">
-              From multi-vendor marketplaces to health consultation platforms,
-              I&apos;ve delivered 20+ real-world applications. I excel at
-              building dynamic frontends, scalable backend systems, and handling
-              full application workflows from development to deployment. My code
-              is clean, maintainable, and focused on solving real business
-              problems.
+              I&apos;ve worked on multiple web applications and implemented
+              features like JWT authentication, Google OAuth, role-based access
+              control, Stripe/PayPal integrations with webhook handling, and
+              real-time chat with Socket.IO. My code stays clean, maintainable,
+              and business-focused.
             </p>
 
             <div className="flex flex-wrap gap-3">
