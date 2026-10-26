@@ -14,9 +14,9 @@ const PROFILE_PHOTO_SRC = "/images/my-image.jpeg";
 const GITHUB_HREF = "https://github.com/talha-sajjad-dev";
 
 const stats = [
-  { value: "1+", label: "Years Experience" },
-  { value: "Real-World", label: "Web Applications" },
-  { value: "100%", label: "Client Satisfaction" },
+  { value: "3+", label: "Years Experience" },
+  { value: "20+", label: "Projects Delivered" },
+  { value: "95%", label: "Client Satisfaction" },
 ];
 
 export default function HeroSection() {
@@ -64,10 +64,10 @@ export default function HeroSection() {
             className="mt-6 max-w-lg text-left text-white/60 animate-fade-in-up"
             style={{ animationDelay: "0.15s" }}
           >
-            MERN Stack Developer with 1+ year of experience building real-world
-            web applications including e-commerce platforms, CRM systems, and
-            SaaS tools. Skilled in secure authentication, payment integration,
-            and real-time features.
+            MERN Stack Developer with 3+ years of hands-on experience building
+            real-world web applications including e-commerce platforms, CRM
+            systems, and SaaS tools. Skilled in secure authentication, payment
+            integration, and real-time features.
           </p>
 
           <div
@@ -76,7 +76,7 @@ export default function HeroSection() {
           >
             <Link
               href="/projects"
-              className="group featured-cta relative z-[15] inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-violet-600 to-blue-600 px-8 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:from-violet-500 hover:to-blue-500 hover:shadow-lg hover:shadow-violet-500/25"
+              className="group featured-cta relative z-[15] inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-violet-600 to-blue-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-violet-900/30 transition-all duration-300 hover:scale-[1.02]"
             >
               View My Work
               <FaArrowRight className="relative z-[1] transition-transform group-hover:translate-x-1" />
@@ -168,7 +168,7 @@ export default function HeroSection() {
 
             {/* MERN Stack — bottom-left, clears badge */}
             <div
-              className="animate-float absolute bottom-[5.25rem] left-2 z-30 w-max max-w-[11rem] rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-3 text-sm text-white shadow-lg sm:bottom-[5.5rem] sm:left-3"
+              className="animate-float absolute bottom-[5.25rem] left-2 z-30 w-max max-w-[11rem] rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-3 text-sm text-white shadow-lg sm:bottom-[5.5rem] sm:left-1"
               style={{ "--r": "2deg", animationDelay: "1s" } as CSSProperties}
             >
               <div className="flex items-center gap-2 font-medium">
@@ -177,13 +177,13 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Client rate — bottom-right */}
+            {/* Client satisfaction — bottom-right */}
             <div
               className="absolute bottom-[5.25rem] right-0 z-30 rounded-xl border border-white/10 bg-white/[0.06] p-3 text-center backdrop-blur sm:bottom-[5.5rem] sm:right-0"
               style={{ transform: "rotate(2deg)" }}
             >
-              <p className="text-sm font-bold text-white">100%</p>
-              <p className="text-[10px] text-white/50">Client Rate</p>
+              <p className="text-sm font-bold text-white">95%</p>
+              <p className="text-[10px] text-white/50">Client Satisfaction</p>
             </div>
           </div>
         </div>
