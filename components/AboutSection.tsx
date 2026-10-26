@@ -36,7 +36,7 @@ export default function AboutSection() {
           {/* Left */}
           <div className="text-left">
             <p className="leading-relaxed text-text-secondary mb-6">
-              I&apos;m a MERN Stack Developer with 1+ year of experience
+              I&apos;m a MERN Stack Developer with 3+ year of experience
               building real-world web applications including e-commerce
               platforms, CRM systems, and SaaS tools. I focus on secure
               authentication, payment integration, and scalable backend
