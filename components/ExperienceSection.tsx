@@ -14,9 +14,9 @@ const timeline: TimelineItem[] = [
     type: "work",
     role: "MERN Stack Developer",
     company: "Suffa Tech",
-    period: "Mar 2025 — Mar 2026",
+    period: "Mar 2025 — Present",
     description:
-      "Worked on multiple web applications including e-commerce and CRM systems. Built MERN applications with REST APIs and modular architecture. Implemented JWT authentication, Google OAuth, and role-based access control. Integrated Stripe and PayPal payment gateways with webhook handling, and developed real-time chat features using Socket.IO.",
+      "Worked on multiple client-facing web applications including e-commerce platforms, CRM systems, and SaaS products. Built MERN stack solutions with modular architecture, secure authentication flows, and scalable API integrations to support business growth.",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Socket.IO"],
   },
   {
@@ -25,7 +25,7 @@ const timeline: TimelineItem[] = [
     company: "ALPHASOFT360",
     period: "Sep 2024 — Mar 2025",
     description:
-      "Maintained and enhanced a large-scale e-commerce platform. Developed new features, resolved critical bugs, and optimized backend workflows to improve reliability and overall performance.",
+      "Maintained and enhanced a large-scale e-commerce platform. Developed new features, resolved production issues, and optimized backend workflows to improve reliability, performance, and user experience.",
     tech: ["JavaScript", "E-commerce", "Bug Fixing", "Workflow Optimization"],
   },
   {
@@ -34,7 +34,7 @@ const timeline: TimelineItem[] = [
     company: "Bahauddin Zakariya University",
     period: "2022 — 2026 (Final Year)",
     description:
-      "Currently pursuing a Computer Science degree while building practical full-stack applications and strengthening software engineering fundamentals.",
+      "Currently pursuing a Computer Science degree while building practical full-stack applications and strengthening core software engineering fundamentals.",
   },
 ];
 
@@ -125,7 +125,7 @@ export default function ExperienceSection() {
                           {item.period}
                         </span>
                         {current ? (
-                          <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/35 bg-emerald-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-400">
+                          <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/35 bg-emerald-500/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-300">
                             ● Current
                           </span>
                         ) : null}
